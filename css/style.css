@@ -1,0 +1,290 @@
+/* Variables */
+
+:root {
+    --basic-white: #ffffff;
+    --basic-neutral: #eeeeee;
+    --basic-black: #000000;
+    --text-color: #283136;
+    --special: #FB565A;
+    --special2: #00CA74;
+    --special3: #EFC849;
+}
+
+/* Global */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 240px;
+    padding: 16px 0;
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--special);
+}
+
+.button:hover {
+    background-color:#E74246;
+}
+
+.button:focus {
+    background-color:#D7373B;
+}
+
+
+/* Main navigation */
+
+.main-nav {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--basic-black);
+    background-color: var(--basic-neutral);
+    text-transform: uppercase;
+}
+
+/*
+.main-header-logo img:hover {
+    color: #000000, 70 %;
+}
+*/
+
+.main-nav-wrapper {
+    background-color: var(--basic-neutral);
+}
+
+.site-nav {
+    list-style: none;
+}
+
+.site-nav a,
+.catalog-nav a,
+.basket-nav a {
+    color: var(--basic-black)
+}
+
+.site-nav a:hover,
+.catalog-nav a:hover,
+.basket-nav a:hover {
+    color: var(--special)
+}
+
+.site-nav a:focus,
+.catalog-nav a:focus,
+.basket-nav a:focus {
+    color: var(--basic-neutral);
+    opacity: 0.3;
+}
+
+/* Container Slider */
+
+.header-slider {
+    background-color: #eeeeee
+}
+
+.slider-list {
+    list-style: none;
+}
+
+.slider-item h3 {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color:var(--basic-black);
+}
+
+/* Service */
+
+.service-item {
+    list-style: none;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.service-item-button{
+    width: 160px;
+    height: 50px;
+}
+
+.service-item-button-pink {
+    background-color: var(--special);
+}
+
+.service-item-button-pink:hover {
+    background-color: #E74246;
+}
+
+.service-item-button-pink:focus {
+    background-color: #D7373B;
+}
+
+.service-item-button-green {
+    background-color: var(--special2);
+}
+
+.service-item-button-green:hover {
+    background-color: #00BC6C;
+}
+
+.service-item-button-green:focus {
+    background-color: #00AA62;
+}
+
+.service-item-button-yellow {
+    background-color: var(--special3);
+}
+
+.service-item-button-yellow:hover {
+    background-color: #EAB534;
+}
+
+.service-item-button-yellow:focus {
+    background-color: #E5A722;
+}
+
+/* About us */
+
+.about-description-title {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    color: #000;
+}
+
+.about-description-list {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-facts p {
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.about-facts span {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #000;
+}
+
+sup {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.facts-list {
+    line-height: 18px;
+}
+
+/* Brands */
+
+.brands-list {
+    list-style: none;
+    text-align: center;
+}
+
+.brands-item img{
+    opacity: 0.2;
+}
+.brands-item img:hover{
+    opacity: 1;
+}
+
+.map-address {
+    background-color:var(--basic-white);
+}
+
+.studio-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.address,
+.address-phone {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #666666;
+}
+
+.address-phone-link {
+    color: #666666;
+}
+
+/* Main footer */
+
+.footer-social {
+    text-align: center;
+}
+  
+.footer-social ul {
+    list-style: none;
+}
+  
+  /* Social button */
+  
+  .social-button {
+    color: #E1E1E1;
+  }
+  
+  .social-button:hover,
+  .social-button:focus {
+    background-color: #E74246;
+  }
+
+  .social-button:active::after {
+    opacity: 0.3
+  }
+
+  .footer-discount b {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    color:var(--basic-black);
+}
+
+.footer-discount p {
+    line-height: 22px;
+    color:#444444;
+}
+
+/* Catalog */
