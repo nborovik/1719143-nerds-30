@@ -16,7 +16,7 @@ body {
     min-width: 1200px;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -36,7 +36,6 @@ img {
 .button {
     font-size: 16px;
     line-height: 18px;
-    max-width: 240px;
     padding: 16px 0;
     width: 240px;
     height: 50px;
@@ -69,12 +68,6 @@ img {
     text-transform: uppercase;
 }
 
-/*
-.main-header-logo img:hover {
-    color: #000000, 70 %;
-}
-*/
-
 .main-nav-wrapper {
     background-color: var(--basic-neutral);
 }
@@ -83,23 +76,33 @@ img {
     list-style: none;
 }
 
-.site-nav a,
-.catalog-nav a,
-.basket-nav a {
-    color: var(--basic-black)
+/*добавить класс в списке и изменить состоянии кнопок*/
+
+.site-nav-link,
+.cart-nav-link {
+    display: inline-block;
+    color:var(--basic-black);
 }
 
-.site-nav a:hover,
-.catalog-nav a:hover,
-.basket-nav a:hover {
-    color: var(--special)
+.site-nav-link[href]:hover,
+.cart-nav-link[href]:hover {
+    color: var(--special);
 }
 
-.site-nav a:focus,
-.catalog-nav a:focus,
-.basket-nav a:focus {
-    color: var(--basic-neutral);
-    opacity: 0.3;
+.site-nav-link[href]:focus,
+.cart-nav-link[href]:focus {
+    color:  rgba(0, 0, 0, 0.3);
+}
+
+.site-nav-link:active,
+.cart-nav-link:active{
+    color: #000;
+    border-bottom: 2px solid #fb565a;
+}
+
+.site-nav-link-active{
+    color: #000;
+    border-bottom: 2px solid #fb565a;
 }
 
 /* Container Slider */
@@ -260,22 +263,21 @@ sup {
     list-style: none;
 }
   
-  /* Social button */
+/* Social button */
   
-  .social-button {
+.social-button {
     color: #E1E1E1;
-  }
+}
   
-  .social-button:hover,
-  .social-button:focus {
+.social-button:hover,
+.social-button:focus {
     background-color: #E74246;
-  }
-
-  .social-button:active::after {
+}
+.social-button:active::after {
     opacity: 0.3
-  }
+}
 
-  .footer-discount b {
+.footer-discount b {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
@@ -288,3 +290,248 @@ sup {
 }
 
 /* Catalog */
+
+/*подправить in normalize*/
+.header-logo img:hover {
+    opacity: 70%;
+}
+
+.header-logo img:focus {
+    opacity: 30%;
+}
+
+.intro{
+    background-color:var(--basic-neutral)
+}
+
+.page-title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: var(--basic-black);
+}
+
+/* Filters */
+
+.filter legend {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 20px;
+}
+
+/* Range-control */
+
+.range-control{
+    border-radius: 3px;
+    background-color: #f1f1f1;
+}
+.range-control .scale{
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-control .bar{
+    width: 138px;
+    height: 2px;
+    background: #00ca74;
+}
+
+/*
+.range-control .toggle{
+}
+
+.range-control .toggle-min{
+}
+
+.range-control .toggle-max{
+}
+*/
+
+.price-control label{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.price-control input{
+    font-family: Roboto;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.max-price{
+    text-align: right;
+}
+
+/* Radio */
+
+.radio-input {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icons/radio-off2.svg);
+}
+
+.radio-input:hover {
+    color: var(--text-color);
+}
+
+.radio-input:disabled + label {
+    opacity: 0.1;
+}
+
+.radio-input:checked {
+    background-image: url(../img/icons/radio-on2.svg);
+}
+
+/* Checkbox */
+
+.checkbox-input {
+    width: 25px;
+    height: 23px;
+    background-image: url(../img/icons/checkbox-on2.svg)
+}
+
+.checkbox-input:hover + label {
+    color: var(--text-color)
+}
+
+.checkbox-input:disabled + label {
+    opacity: 0.1;
+}
+
+.filter-button {
+    width: 260px;
+    height: 50px;
+    color:var(--basic-black);
+    background-color: var(--basic-neutral);
+}
+
+.filter-button:hover {
+    background-color: #DFDFDF;
+}
+
+.filter-button:focus {
+    color: rgba(0, 0, 0, 0.3);
+    background: #D5D5D5;
+}
+
+/* Sorting */
+
+.catalog-sorting h2 {
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+
+.sort-list {
+    list-style: none;
+}
+
+.sort-list li {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.sort-list-item {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-list-item:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-list-item:active,
+.sort-list-item:focus {
+    color: var(--basic-black);
+}
+
+.sort-list-item-active {
+    color: var(--basic-black);
+}
+.sort-list-up::before{
+    background-image: url(../img/icons/icon-sort.svg);
+}
+
+/* Catalog */
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-popup h3 {
+    color: var(--basic-black);
+}
+
+.catalog-caption {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.catalog-caption:hover {
+    color: var(--special);
+}
+
+.catalog-caption:focus {
+    opacity: 0.3;
+}
+
+/* Pagination */
+
+.pagination-list {
+    font-weight: 500;
+    list-style: none;
+}
+
+.pagination-item a,
+.pagination-item a:link,
+.pagination-item a:visited{
+    color: var(--basic-black);
+    border-radius: 3px;
+    background-color: #eee;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus{
+    color: var(--basic-black);
+    background-color: #dfdfdf;
+}
+
+.pagination-item a:active{
+    color:var(--basic-black);
+    background-color: #d5d5d5;
+}
+
+.pagination-item:last-child a{
+    text-transform: uppercase;
+}
+
+.pagination-item:last-child a:hover,
+.pagination-item:last-child a:focus{
+    background-color: #dfdfdf;
+}
+
+.pagination-item-active a,
+.pagination-item-active a:hover,
+.pagination-item-active a:focus,
+.pagination-item-active a:active{
+    border: 3px solid #dbdbdb;
+    background-color: #fff;
+}
