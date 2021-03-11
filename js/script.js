@@ -1,12 +1,12 @@
-var modal = document.querySelector(".modal");
-var popup = document.querySelector(".wap_content__button");
-var close = modal.querySelector(".modal_close");
-var formModal = modal.querySelector("form");
-var formName = modal.querySelector("[name=send_us_name]");
-var formEmail = modal.querySelector("[name=send_us_email]");
+const modal = document.querySelector(".modal");
+const popup = document.querySelector(".wap_content__button");
+const close = modal.querySelector(".modal_close");
+const formModal = modal.querySelector("form");
+const formName = modal.querySelector("[name=send_us_name]");
+const formEmail = modal.querySelector("[name=send_us_email]");
 
-var isStorageSupport = true;
-var storage = "";
+let isStorageSupport = true;
+const storage = "";
 
 try {
     storage = localStorage.getItem("Name");
@@ -57,9 +57,7 @@ formModal.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         evt.preventDefault();
-        if (modal.classList.contains("modal_show")) {
-            modal.classList.remove("modal_show");
-            modal.classList.remove("modal_error");
-        }
+        modal_form.classList.add('animation-disappeared');
+        setTimeout (closeModal, 1000);
     }
 });
