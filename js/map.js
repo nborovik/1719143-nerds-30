@@ -3,7 +3,7 @@ function init(){
     const myMap = new ymaps.Map("map_yandex", {
         center: [59.93867179, 30.32312099],
         zoom: 16,
-        controls: ["zoomControl"], /*не работает*/
+        controls: ["zoomControl"], 
         behaviors: ['drag']
     });
 
