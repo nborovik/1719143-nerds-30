@@ -1,9 +1,13 @@
 const modal = document.querySelector(".modal");
+const modalLabel = document.querySelector(".modal_label");
 const popup = document.querySelector(".wap_content__button");
 const close = modal.querySelector(".modal_close");
 const formModal = modal.querySelector("form");
-const login = modal.querySelector(".form_name");
-const email = modal.querySelector(".form_email");
+const login = formModal.querySelector(".form_name");
+const email = formModal.querySelector(".form_email");
+const letter = formModal.querySelector(".form_letter");
+const inputs = modal.querySelectorAll ("input");
+
 
 // открытие окна
 popup.addEventListener("click", function (evt) {
@@ -24,11 +28,25 @@ close.addEventListener("click", function (evt) {
 // отправка формы
 formModal.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    if (!login.value || !email.value ) {
+    if (!login.value || !email.value || !letter.value ) {
         modal.classList.remove("modal_error");
         modal.offsetWidth = modal.offsetWidth;
         modal.classList.add("modal_error");
-    } else {
+        for (const i = 0; i < inputs.length; i++)  {
+            if (!inputs[i].value || !inputs[i].checkValidity()) {
+                inputs[i].classList.add("invalid");
+            }
+            else {
+                inputs[i].classList.remove("invalid");
+            }
+            if (!letter.value || !letter.checkValidity ()) {
+                letter.classList.add("invalid");
+            }
+            else {
+                letter.classList.remove("invalid");
+            }
+        }   
+    }  else {
         this.submit();
     }
 });
@@ -39,5 +57,4 @@ document.addEventListener("keydown", function (evt) {
         modal.classList.remove("modal_show");
         modal.classList.remove("modal_error");  
     }
-
 });

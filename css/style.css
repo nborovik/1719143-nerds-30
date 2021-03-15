@@ -1697,8 +1697,9 @@ input[type=checkbox]:focus + .check_box::before{
     border: 2px solid var(--basic-black);
 }
 
-.send_us_form input[type='text']:invalid,
-.send_us_form input[type='email']:invalid {
+.send_us_form input[type='text'].invalid,
+.send_us_form input[type='email'].invalid,
+.send_us_form textarea.invalid {
     color: #E74246;
     border: 2px solid #E74246;
 }
