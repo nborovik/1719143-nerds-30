@@ -39,6 +39,12 @@ formModal.addEventListener("submit", function (evt) {
             else {
                 inputs[i].classList.remove("invalid");
             }
+            if (!email.value || !email.checkValidity ()) {
+                email.classList.add("invalid");
+            }
+            else {
+                email.classList.remove("invalid");
+            }
             if (!letter.value || !letter.checkValidity ()) {
                 letter.classList.add("invalid");
             }
@@ -50,6 +56,9 @@ formModal.addEventListener("submit", function (evt) {
         this.submit();
     }
 });
+
+//formRemoveError(inputs);
+
 
 //закрытие на esc
 document.addEventListener("keydown", function (evt) {
