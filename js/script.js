@@ -38,8 +38,8 @@ formModal.addEventListener("submit", function (evt) {
             else {
                 inputs[i].classList.remove("invalid");
             }
-            login.addEventListener('input', function() {
-                login.classList.remove('invalid')
+            login.addEventListener("input", function() {
+                login.classList.remove("invalid")
             })
             if (!email.value || !email.checkValidity ()) {
                 email.classList.add("invalid");
@@ -47,8 +47,8 @@ formModal.addEventListener("submit", function (evt) {
             else {
                 email.classList.remove("invalid");
             }
-            email.addEventListener('input', function() {
-                email.classList.remove('invalid')
+            email.addEventListener("input", function() {
+                email.classList.remove("invalid")
             })
             if (!letter.value || !letter.checkValidity ()) {
                 letter.classList.add("invalid");
@@ -56,15 +56,15 @@ formModal.addEventListener("submit", function (evt) {
             else {
                 letter.classList.remove("invalid");
             }
-            letter.addEventListener('input', function() {
-                letter.classList.remove('invalid')
+            letter.addEventListener("input", function() {
+                letter.classList.remove("invalid")
             })
         }
     }  else {
         this.submit();
-        login.value = '';
-        email.value = '';
-        letter.value = '';
+        login.value = "";
+        email.value = "";
+        letter.value = "";
     }
 });
 

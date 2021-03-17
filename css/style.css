@@ -100,7 +100,8 @@ li {
     background-color: var(--special);
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background-color:#E74246;
 }
 
@@ -187,7 +188,6 @@ li {
 .header_menu__link--active,
 .header_cart {
     vertical-align: top;
-
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
@@ -357,7 +357,8 @@ li {
 }
 
 
-.slider_list__button:hover {
+.slider_list__button:hover
+.slider_list__button:focus {
     background-color:#E74246;
 }
 
@@ -426,7 +427,8 @@ li {
     background-color: var(--special);
 }
 
-.service_list__button--pink:hover {
+.service_list__button--pink:hover,
+.service_list__button--pink:focus {
     background-color: #E74246;
 }
 
@@ -441,7 +443,8 @@ li {
     background-color: var(--special2);
 }
 
-.service_list__button--green:hover {
+.service_list__button--green:hover,
+.service_list__button--green:focus {
     background-color: #00BC6C;
 }
 
@@ -456,7 +459,8 @@ li {
     background-color: var(--special3);
 }
 
-.service_list__button--yellow:hover {
+.service_list__button--yellow:hover,
+.service_list__button--yellow:focus {
     background-color: #EAB534;
 }
 
@@ -554,7 +558,6 @@ li {
     margin-bottom: 31px;
     margin-left: 8px;
     padding: 0;
-
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -576,7 +579,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 0px;
-    margin: 0;
+    margin:0;
 }
 
 .about_facts__title {
@@ -717,7 +720,6 @@ opacity: 0.1;
 .map_content__address,
 .map_content__address_phone {
     margin: 20px 0px;
-    margin-right: 5px;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
@@ -1140,9 +1142,11 @@ opacity: 0.1;
     margin-left: auto;
     color: #fff;
     background-color: #fb565a;
+    outline: none;
 }
 
-.catalog_popup__button:hover {
+.catalog_popup__button:hover,
+.catalog_popup__button:focus {
     color: var(--basic-white);
     background-color: #e74246;
 }
@@ -1396,9 +1400,11 @@ input[type=checkbox]:checked:disabled + .check_box::before {
     height: 50px;
     color:var(--basic-black);
     background-color: var(--basic-neutral);
+    outline: none;
 }
 
-.filter__button:hover {
+.filter__button:hover,
+.filter__button:focus {
     background-color: #DFDFDF;
 }
 
@@ -1735,9 +1741,11 @@ textarea:focus::placeholder{
     color: #fff;
     background-color: #fb565a;
     text-transform: uppercase;
+    outline: none;
 }
 
-.send_us_form__button:hover {
+.send_us_form__button:hover,
+.send_us_form__button:focus {
     background-color: #e74246;
 }
 
