@@ -100,8 +100,7 @@ li {
     background-color: var(--special);
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     background-color:#E74246;
 }
 
@@ -358,8 +357,7 @@ li {
 }
 
 
-.slider_list__button:hover,
-.slider_list__button:focus {
+.slider_list__button:hover {
     background-color:#E74246;
 }
 
@@ -428,8 +426,7 @@ li {
     background-color: var(--special);
 }
 
-.service_list__button--pink:hover,
-.service_list__button--pink:focus {
+.service_list__button--pink:hover {
     background-color: #E74246;
 }
 
@@ -444,8 +441,7 @@ li {
     background-color: var(--special2);
 }
 
-.service_list__button--green:hover,
-.service_list__button--green:focus {
+.service_list__button--green:hover {
     background-color: #00BC6C;
 }
 
@@ -460,8 +456,7 @@ li {
     background-color: var(--special3);
 }
 
-.service_list__button--yellow:hover,
-.service_list__button--yellow:focus {
+.service_list__button--yellow:hover {
     background-color: #EAB534;
 }
 
@@ -1147,8 +1142,7 @@ opacity: 0.1;
     background-color: #fb565a;
 }
 
-.catalog_popup__button:hover,
-.catalog_popup__button:focus {
+.catalog_popup__button:hover {
     color: var(--basic-white);
     background-color: #e74246;
 }
@@ -1404,15 +1398,13 @@ input[type=checkbox]:checked:disabled + .check_box::before {
     background-color: var(--basic-neutral);
 }
 
-.filter__button:hover,
-.filter__button:focus {
+.filter__button:hover {
     background-color: #DFDFDF;
 }
 
 .filter__button:active {
     color: rgba(0, 0, 0, 0.3);
     background: #D5D5D5;
-
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
@@ -1722,6 +1714,12 @@ textarea:focus::placeholder{
     border: 2px solid #E74246;
 }
 
+.form_name.valid,
+.form_email.valid,
+.form_letter.valid {
+    border: 2px solid green;
+}
+
 .form_name.invalid::placeholder,
 .form_email.invalid::placeholder,
 .form_letter.invalid::placeholder{
@@ -1739,8 +1737,7 @@ textarea:focus::placeholder{
     text-transform: uppercase;
 }
 
-.send_us_form__button:hover,
-.send_us_form__button:focus {
+.send_us_form__button:hover {
     background-color: #e74246;
 }
 

@@ -16,7 +16,6 @@ popup.addEventListener("click", function (evt) {
     document.body.style.overflow = "hidden";
 });
 
-
 // закрытие окна
 close.addEventListener("click", function (evt) {
     modal.classList.remove("modal_show");
@@ -35,29 +34,39 @@ formModal.addEventListener("submit", function (evt) {
         for (const i = 0; i < inputs.length; i++)  {
             if (!inputs[i].value || !inputs[i].checkValidity()) {
                 inputs[i].classList.add("invalid");
-            }
+            } 
             else {
                 inputs[i].classList.remove("invalid");
             }
+            login.addEventListener('input', function() {
+                login.classList.remove('invalid')
+            })
             if (!email.value || !email.checkValidity ()) {
                 email.classList.add("invalid");
             }
             else {
                 email.classList.remove("invalid");
             }
+            email.addEventListener('input', function() {
+                email.classList.remove('invalid')
+            })
             if (!letter.value || !letter.checkValidity ()) {
                 letter.classList.add("invalid");
             }
             else {
                 letter.classList.remove("invalid");
             }
-        }   
+            letter.addEventListener('input', function() {
+                letter.classList.remove('invalid')
+            })
+        }
     }  else {
         this.submit();
+        login.value = '';
+        email.value = '';
+        letter.value = '';
     }
 });
-
-//formRemoveError(inputs);
 
 
 //закрытие на esc
