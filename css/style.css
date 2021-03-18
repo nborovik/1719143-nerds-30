@@ -640,7 +640,6 @@ li {
 .brands__item:not(:first-of-type)::before {
     content: "";
     position: absolute;
-    display: inline-block;
     box-sizing: border-box;
     width: 2px;
     height: 52px;
@@ -1260,6 +1259,7 @@ opacity: 0.1;
     background: #f1f1f1;
     font-family: inherit;
     font-size: inherit;
+    outline: 0;
 }
 
 /* Radio */
@@ -1690,16 +1690,16 @@ input[type=checkbox]:checked:disabled + .check_box::before {
     outline: none;
 }
 
-input[type='text']:hover,
-input[type='email']:hover,
-textarea[name="send_letter"]:hover {
+.form_name:hover,
+.form_email:hover,
+.form_letter:hover {
     border: 2px solid #B4B9BB;
     outline: none;
 }
 
-input[type='text']:focus,
-input[type='email']:focus,
-textarea[name="send_letter"]:focus {
+.form_name:focus,
+.form_email:focus,
+.form_letter:focus {
     color: #444444;
     border: 2px solid var(--basic-black);
 }
