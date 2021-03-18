@@ -961,18 +961,15 @@ opacity: 0.1;
     color: rgba(0, 0, 0, 0.3);
 }
 
-.sort_list__item:hover,
-.sort_list__item:focus {
+.sort_list__item:hover {
     color: rgba(0, 0, 0, 0.6);
 }
+
 
 .sort_list__item:active {
     color: var(--basic-black);
 }
 
-.sort_list__item--active {
-    color: var(--basic-black);
-}
 
 .sort_list--up{
     position: relative;
@@ -990,7 +987,6 @@ opacity: 0.1;
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
-
     opacity: 0.2;
     background-image: url("../img/icons/icon-sort.svg");
 }
@@ -999,6 +995,8 @@ opacity: 0.1;
 .sort_list--down:hover::before{
     opacity: 0.4;
 }
+
+
 .sort_list--up:active::before,
 .sort_list--down:active::before{
     opacity: 1;
@@ -1017,6 +1015,7 @@ opacity: 0.1;
     width: 11px;
     height: 10px;
     content: '';
+    opacity: 0.2;
     background-image: url("../img/icons/icon-sort.svg");
 }
 
@@ -1307,10 +1306,6 @@ input[type=radio]:hover + .radio_box::before{
     opacity: 1;
 }
 
-input[type=radio]:focus + .radio_box::before{
-    outline: 1px solid blue;
-}
-
 input[type=radio]:disabled + .radio_box::before {
     opacity: 0.1;
 }
@@ -1378,10 +1373,6 @@ input[type=checkbox]:checked + .check_box::before{
 
 input[type=checkbox]:hover + .check_box::before{
     opacity: 1;
-}
-
-input[type=checkbox]:focus + .check_box::before{
-    outline: 1px solid blue;
 }
 
 input[type=checkbox]:disabled + .check_box:before {
