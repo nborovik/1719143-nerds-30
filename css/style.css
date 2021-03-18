@@ -965,11 +965,10 @@ opacity: 0.1;
     color: rgba(0, 0, 0, 0.6);
 }
 
-
+.sort_list__item:focus,
 .sort_list__item:active {
     color: var(--basic-black);
 }
-
 
 .sort_list--up{
     position: relative;
@@ -994,6 +993,11 @@ opacity: 0.1;
 .sort_list--up:hover::before,
 .sort_list--down:hover::before{
     opacity: 0.4;
+}
+
+.sort_list--up:focus::before,
+.sort_list--down:focus::before{
+    opacity: 1;
 }
 
 
